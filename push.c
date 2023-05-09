@@ -4,7 +4,7 @@
 //pa, envia o primeiro do b para o primeiro do a
 
 void	pa(t_data *data)
-{ df   
+{
 	int	i;
 	int	j;
 
