@@ -36,9 +36,9 @@ void	p_argb(t_data *data)
 	int	i;
 
 	i = 0;
-	while (i < data->orded.a.size)
+	while (i < data->original.a.size)
 	{
-		printf("B:%d\n", data->orded.a.stack[i]);
+		printf("B:%d\n", data->original.a.stack[i]);
 		i++;
 	}
 }

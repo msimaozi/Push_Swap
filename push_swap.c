@@ -34,6 +34,7 @@ int	main(int argc, char **argv)
 		if (sorted(data) == 1)
 			return (0);
 		sort(data, argc - 1);
+		p_arg(data);
 		free_all(data);
 	}
 }

@@ -24,7 +24,7 @@ void	sort_big(t_data *data)
 	while ((num >> max_bits) != 0)
 		max_bits++;
 	i = 0;
-	while (i < max_bits)
+	while (i < max_bits && sorted(data) ==  0)
 	{
 		j = 0;
 		while (j < num)
