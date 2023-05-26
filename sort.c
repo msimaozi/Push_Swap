@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 11:23:47 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:23:48 by msimaozi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
 void	sort(t_data *data, int argc)
 {
-	//int	i;
 	if (argc == 2)
 		if (data->original.a.stack[0] > data->original.a.stack[1])
 			sa(data);
@@ -14,34 +24,14 @@ void	sort(t_data *data, int argc)
 	if (argc > 5)
 	{
 		organize(data, argc);
-		// i = 0;
-		// while (i < data->copy.a.size)
-		// {
-		// 	printf("A:%d\n", data->copy.a.stack[i]);
-		// 	i++;
-		// }
-		// printf("\n\n");
 		get_nums_radix(data);
-		// i = 0;
-		// while (i < data->orded.a.size)
-		// {
-		// 	printf("A:%d\n", data->orded.a.stack[i]);
-		// 	i++;
-		// }
-		sort_BIG(data);
-		// printf("\n\n");
-		// i = 0;
-		// while (i < data->orded.a.size)
-		// {
-		// 	printf("A:%d\n", data->orded.a.stack[i]);
-		// 	i++;
-		// }
+		sort_big(data);
 	}
 }
 
 void	sort_3(t_data *data)
 {
-	int *s;
+	int	*s;
 
 	s = data->original.a.stack;
 	if (sorted(data) == 0)

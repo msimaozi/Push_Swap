@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 10:26:58 by msimaozi          #+#    #+#             */
-/*   Updated: 2023/04/23 01:58:30 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/09 11:25:09 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:25:10 by msimaozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_data	*data;
-	int	i;
+	int		i;
 
 	i = 1;
 	if (argc < 2)
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		data = malloc(sizeof(t_data));
-		init(data, argc - 1);
+		init(data, argc);
 		while (i < argc)
 		{
 			checknum(data, argv[i]);
@@ -34,5 +34,17 @@ int	main(int argc, char **argv)
 		if (sorted(data) == 1)
 			return (0);
 		sort(data, argc - 1);
+		free_all(data);
 	}
+}
+
+void	free_all(t_data *data)
+{
+	free(data->original.a.stack);
+	free(data->original.b.stack);
+	free(data->copy.a.stack);
+	free(data->copy.b.stack);
+	free(data->orded.a.stack);
+	free(data->orded.b.stack);
+	free(data);
 }

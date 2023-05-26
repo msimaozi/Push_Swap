@@ -1,14 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   BIG_op.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 11:21:31 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:21:34 by msimaozi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	paB(t_data *data)
+void	pab(t_data *data)
 {
 	int	i;
 	int	j;
 
-	data->orded.a.size++;	
+	data->orded.a.size++;
 	j = data->orded.a.size - 1;
-	while (data->orded.a.size != 1 && j >= 0)
+	while (j > 0)
 	{
 		data->orded.a.stack[j] = data->orded.a.stack[j - 1];
 		j--;
@@ -24,14 +35,14 @@ void	paB(t_data *data)
 	ft_putstr_fd("pa\n", 1);
 }
 
-void	pbB(t_data *data)
+void	pbb(t_data *data)
 {
 	int	i;
 	int	j;
 
-	data->orded.b.size++;	
+	data->orded.b.size++;
 	j = data->orded.b.size - 1;
-	while (data->orded.b.size != 1 && j >= 0)
+	while (j > 0)
 	{
 		data->orded.b.stack[j] = data->orded.b.stack[j - 1];
 		j--;
@@ -47,7 +58,7 @@ void	pbB(t_data *data)
 	ft_putstr_fd("pb\n", 1);
 }
 
-void	raB(t_data *data)
+void	rab(t_data *data)
 {
 	int	i;
 	int	temp;

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rorotate.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 11:22:51 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:22:55 by msimaozi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -7,7 +18,7 @@ void	rra(t_data *data)
 {
 	int	temp;
 	int	i;
-	
+
 	temp = data->original.a.stack[data->original.a.size - 1];
 	i = data->original.a.size;
 	while (i >= 0)
@@ -25,7 +36,7 @@ void	rrb(t_data *data)
 {
 	int	temp;
 	int	i;
-	
+
 	temp = data->original.b.stack[data->original.a.size - 1];
 	i = data->original.b.size;
 	while (i >= 0)

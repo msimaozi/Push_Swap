@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 10:56:18 by msimaozi          #+#    #+#             */
-/*   Updated: 2023/04/21 21:32:55 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/09 11:24:03 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:24:05 by msimaozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void verify_dup(t_data *data, int argc, char **argv)
+void	verify_dup(t_data *data, int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -24,7 +24,7 @@ void verify_dup(t_data *data, int argc, char **argv)
 	{
 		x = ft_atoi(argv[i]);
 		j = i + 1;
-		while (j < argc)
+		while (j <= argc)
 		{
 			y = ft_atoi(argv[j]);
 			if (x == y)

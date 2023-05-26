@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 11:22:17 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:22:17 by msimaozi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -8,9 +19,9 @@ void	pa(t_data *data)
 	int	i;
 	int	j;
 
-	data->original.a.size++;	
+	data->original.a.size++;
 	j = data->original.a.size - 1;
-	while (data->original.a.size != 1 && j >= 0)
+	while (j > 0)
 	{
 		data->original.a.stack[j] = data->original.a.stack[j - 1];
 		j--;
@@ -33,9 +44,9 @@ void	pb(t_data *data)
 	int	i;
 	int	j;
 
-	data->original.b.size++;	
+	data->original.b.size++;
 	j = data->original.b.size - 1;
-	while (data->original.b.size != 1 && j >= 0)
+	while (j > 0)
 	{
 		data->original.b.stack[j] = data->original.b.stack[j - 1];
 		j--;

@@ -13,13 +13,14 @@
 #include<unistd.h>
 #include<stdio.h>
 #include<string.h>
+#include<limits.h>
 #include"libft.h"
 
-int	ft_atoi(char *str)
+ssize_t	ft_atoi(char *str)
 {
-	int	x;
-	int	y;
-	int	z;
+	int			x;
+	ssize_t		y;
+	int			z;
 
 	x = 0;
 	y = 0;
@@ -35,7 +36,8 @@ int	ft_atoi(char *str)
 		y = (y * 10) + (str[x] - '0');
 		x++;
 	}
-	return (y * z);
+	y = y * z;
+	return (y);
 }
 
 /*int	 main(void)

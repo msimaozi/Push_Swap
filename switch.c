@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   switch.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 10:38:07 by msimaozi          #+#    #+#             */
-/*   Updated: 2023/04/21 21:33:29 by marvin           ###   ########.fr       */
+/*   Created: 2023/05/09 11:23:54 by msimaozi          #+#    #+#             */
+/*   Updated: 2023/05/09 11:23:54 by msimaozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	sa(t_data *data)
 {
 	int	temp;
-	
+
 	temp = data->original.a.stack[0];
 	data->original.a.stack[0] = data->original.a.stack[1];
 	data->original.a.stack[1] = temp;
@@ -29,7 +29,7 @@ void	sa(t_data *data)
 void	sb(t_data *data)
 {
 	int	temp;
-	
+
 	temp = data->original.b.stack[0];
 	data->original.b.stack[0] = data->original.b.stack[1];
 	data->original.b.stack[1] = temp;
