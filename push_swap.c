@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:25:09 by msimaozi          #+#    #+#             */
-/*   Updated: 2023/05/09 11:25:10 by msimaozi         ###   ########.fr       */
+/*   Updated: 2023/06/01 19:31:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,24 @@ int	main(int argc, char **argv)
 		if (sorted(data) == 1)
 			return (0);
 		sort(data, argc - 1);
-		p_arg(data);
+		i = 0;
+		while (i < data->original.a.size)
+		{
+			printf("A:%d\n", data->original.a.stack[i]);
+			i++;
+		}
+		i = 0;
+		while (i < data->original.a.size)
+		{
+			printf("B:%d\n", data->copy.a.stack[i]);
+			i++;
+		}
+		i = 0;
+		while (i < data->original.a.size)
+		{
+			printf("C:%d\n", data->orded.a.stack[i]);
+			i++;
+		}
 		free_all(data);
 	}
 }

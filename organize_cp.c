@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   organize_cp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msimaozi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:22:10 by msimaozi          #+#    #+#             */
-/*   Updated: 2023/05/09 11:22:11 by msimaozi         ###   ########.fr       */
+/*   Updated: 2023/06/01 20:04:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	organize(t_data *data, int argc)
 	while (i < argc)
 	{
 	j = i + 1;
-		while (j < argc - 1)
+		while (j < argc)
 		{
 			if (data->copy.a.stack[i] > data->copy.a.stack[j])
 			{
@@ -45,11 +45,11 @@ void	get_nums_radix(t_data *data)
 	j = 0;
 	while (i < data->original.a.size)
 	{
-		if (data->original.a.stack[i] == data->copy.a.stack[j])
-			data->orded.a.stack[i] = j + 1;
 		j = 0;
 		while (data->original.a.stack[i] != data->copy.a.stack[j])
 			j++;
+		if (data->original.a.stack[i] == data->copy.a.stack[j])
+			data->orded.a.stack[i] = j;
 	i++;
 	}
 }
